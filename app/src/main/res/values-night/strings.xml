@@ -1,12 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Practica02</string>
     <string name="btnexample">Button</string>
     <string name="header">Header</string>
     <string name="strTitulo">Titulo</string>
     <string name="strDirector">Director</string>
     <string name="strDuracion">Duracion</string>
-    <string name="strGenero">Genero</string>
-    <string name="strCalificacion">Calificacion</string>
     <string name="btnGuardar">Guardar</string>
     <string name="strNoRegistros">Sin registros</string>
 </resources>
