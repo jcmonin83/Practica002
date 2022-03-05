@@ -1,15 +1,14 @@
 package com.pp.practica02
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Toast
-import com.pp.practica02.services.PeliculaAdapter
-import com.pp.practica02.databinding.ActivityMainBinding
-import com.pp.practica02.data.dbHelper
+import android.widget.AdapterView
+import androidx.appcompat.app.AppCompatActivity
 import com.pp.practica02.data.dbPeliculas
+import com.pp.practica02.databinding.ActivityMainBinding
 import com.pp.practica02.models.Pelicula
+import com.pp.practica02.services.PeliculaAdapter
 import com.pp.practica02.views.DetailActivity
 import com.pp.practica02.views.InsertActivity
 
@@ -19,7 +18,6 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
     private lateinit var listaPelicula: ArrayList<Pelicula>
-    private var modeBundle = Bundle()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,17 +37,18 @@ class MainActivity : AppCompatActivity() {
 
         // Instancia Adapter
         val peliculaAdapter = PeliculaAdapter(this, listaPelicula)
-        binding.lvLista.adapter = peliculaAdapter
 
-        binding.lvLista.setOnItemClickListener { adapterView, view, i, l ->
+
+        binding.lvLista.setOnItemClickListener { adapterView: AdapterView<*>?, view: View?, i, l ->
             //l es el id
             //i es la posición
             val intent = Intent(this, DetailActivity::class.java)
-            intent.putExtra("ID", l.toInt())
+            intent.putExtra("Id", l.toInt())
 
             startActivity(intent)
             finish()
         }
+        binding.lvLista.adapter = peliculaAdapter
 
     }
 

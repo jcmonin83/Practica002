@@ -9,4 +9,20 @@
     <string name="strCalificacion">Calificacion</string>
     <string name="btnGuardar">Guardar</string>
     <string name="strNoRegistros">Sin registros</string>
+    <string name="strEditar">Editar</string>
+    <string name="Borrar">Borrar</string>
+<!--    Genero Pelicula-->
+    <string name="gen01">Accion</string>
+    <string name="gen02">Ficcion</string>
+    <string name="gen03">Comedia</string>
+    <string name="gen04">Drama</string>
+    <string name="gen05">Infantil</string>
+    <string-array name="generoOptions">
+        <item>@string/gen01</item>
+        <item>@string/gen02</item>
+        <item>@string/gen03</item>
+        <item>@string/gen04</item>
+        <item>@string/gen05</item>
+    </string-array>
+
 </resources>

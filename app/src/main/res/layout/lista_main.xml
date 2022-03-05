@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:descendantFocusability="blocksDescendants">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline2"
@@ -51,30 +51,37 @@
         android:id="@+id/txtvTitulo"
         android:layout_width="109dp"
         android:layout_height="24dp"
-        android:text="TextView"
+        android:text="@string/strTitulo"
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
-        app:layout_constraintTop_toTopOf="@+id/guideline2" />
+        app:layout_constraintTop_toTopOf="@+id/guideline2"
+        android:focusable="false"
+        android:focusableInTouchMode="false"/>
 
     <TextView
         android:id="@+id/txtvDirector"
         android:layout_width="111dp"
         android:layout_height="23dp"
-        android:text="TextView"
+        android:text="@string/strDirector"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/guideline8"
-        app:layout_constraintTop_toTopOf="@+id/guideline3" />
+        app:layout_constraintTop_toTopOf="@+id/guideline3"
+        android:focusable="false"
+        android:focusableInTouchMode="false"/>
 
     <RatingBar
         android:id="@+id/ratbCalificacion"
         android:numStars="5"
         android:layout_width="193dp"
         android:layout_height="48dp"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:contentDescription="@string/strCalificacion"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -86,25 +93,29 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:text="TextView"
-        android:textSize="10sp"
+        android:text="@string/strDuracion"
+        android:textSize="12sp"
         app:layout_constraintBottom_toTopOf="@+id/guideline5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toEndOf="@+id/ratbCalificacion"
         app:layout_constraintTop_toTopOf="@+id/guideline4"
-        app:layout_constraintVertical_bias="0.52" />
+        app:layout_constraintVertical_bias="0.52"
+        android:focusable="false"
+        android:focusableInTouchMode="false"/>
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="106dp"
         android:layout_height="118dp"
         android:scaleType="fitCenter"
+        android:contentDescription="@string/strTitulo"
         app:layout_constraintBottom_toTopOf="@+id/guideline6"
         app:layout_constraintEnd_toStartOf="@+id/guideline8"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/guideline2"
         app:layout_constraintVertical_bias="0.36"
-
-        app:srcCompat="@drawable/header" />
+        app:srcCompat="@drawable/header"
+        android:focusable="false"
+        android:focusableInTouchMode="false"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

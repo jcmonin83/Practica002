@@ -69,32 +69,45 @@
             tools:ignore="TouchTargetSizeCheck"></com.google.android.material.textfield.TextInputEditText>
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/iTxtLytGenero"
-        android:layout_width="240dp"
-        android:layout_height="42dp"
-        android:hint="@string/strGenero"
-        app:boxBackgroundMode="outline"
-        app:boxCornerRadiusBottomEnd="16dp"
-        app:boxCornerRadiusBottomStart="16dp"
-        app:boxCornerRadiusTopEnd="16dp"
-        app:boxCornerRadiusTopStart="16dp"
-        app:circularflow_radiusInDP="10dp"
+<!--    <com.google.android.material.textfield.TextInputLayout-->
+<!--        android:id="@+id/iTxtLytGenero"-->
+<!--        android:layout_width="240dp"-->
+<!--        android:layout_height="42dp"-->
+<!--        android:hint="@string/strGenero"-->
+<!--        app:boxBackgroundMode="outline"-->
+<!--        app:boxCornerRadiusBottomEnd="16dp"-->
+<!--        app:boxCornerRadiusBottomStart="16dp"-->
+<!--        app:boxCornerRadiusTopEnd="16dp"-->
+<!--        app:boxCornerRadiusTopStart="16dp"-->
+<!--        app:circularflow_radiusInDP="10dp"-->
 
 
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/iTxtLytDirector"-->
+<!--        app:layout_constraintVertical_bias="0.05"-->
+<!--        app:startIconDrawable="@drawable/ic_class">-->
+
+<!--        <com.google.android.material.textfield.TextInputEditText-->
+<!--            android:id="@+id/iTxtGenero"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            tools:ignore="TouchTargetSizeCheck"></com.google.android.material.textfield.TextInputEditText>-->
+<!--    </com.google.android.material.textfield.TextInputLayout>-->
+
+    <Spinner
+        android:id="@+id/spnGenero"
+        android:layout_width="239dp"
+        android:layout_height="48dp"
+        android:outlineSpotShadowColor="@color/purple_500"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.51"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iTxtLytDirector"
         app:layout_constraintVertical_bias="0.05"
-        app:startIconDrawable="@drawable/ic_class">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/iTxtGenero"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            tools:ignore="TouchTargetSizeCheck"></com.google.android.material.textfield.TextInputEditText>
-    </com.google.android.material.textfield.TextInputLayout>
+        tools:ignore="SpeakableTextPresentCheck"></Spinner>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/iTxtLytDuracion"
@@ -112,7 +125,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintVertical_bias="0.05"
-        app:layout_constraintTop_toBottomOf="@+id/iTxtLytGenero"
+        app:layout_constraintTop_toBottomOf="@+id/spnGenero"
         app:startIconDrawable="@drawable/ic_timer">
 
         <com.google.android.material.textfield.TextInputEditText

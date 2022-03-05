@@ -7,4 +7,6 @@
     <string name="strDuracion">Duracion</string>
     <string name="btnGuardar">Guardar</string>
     <string name="strNoRegistros">Sin registros</string>
+    <string name="strEditar">Editar</string>
+    <string name="Borrar">Borrar</string>
 </resources>

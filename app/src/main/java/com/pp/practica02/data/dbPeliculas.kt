@@ -28,6 +28,22 @@ class dbPeliculas(context: Context?) : dbHelper(context)  {
         return  lstPeliculas
     }
 
+    fun getPelicula(Id: Int): Pelicula?{
+        val dbHelper = dbHelper(context)
+        val db = dbHelper.writableDatabase
+
+        var pelicula: Pelicula? = null
+        var cursorPelicula: Cursor? = null
+        cursorPelicula = db.rawQuery("select * from $DB_Tables where Id=$Id LIMIT 1", null)
+        if(cursorPelicula.moveToFirst()){
+                pelicula = Pelicula(cursorPelicula.getInt(0),cursorPelicula.getString(1),cursorPelicula.getString(2),cursorPelicula.getString(3),cursorPelicula.getInt(4),cursorPelicula.getFloat(5))
+        }
+
+        cursorPelicula.close()
+        return pelicula
+
+    }
+
     fun insertPelicula(Titulo: String,Director: String,Genero: String,Duracion: Int,Calificacion: Float):Long{
         val dbHelper = dbHelper(context)
         val db = dbHelper.writableDatabase
@@ -57,14 +73,6 @@ class dbPeliculas(context: Context?) : dbHelper(context)  {
         val db = dbHelper.writableDatabase
 
         try {
-            val values = ContentValues()
-            values.put("Id",Id)
-            values.put("Titulo",Titulo)
-            values.put("Director",Director)
-            values.put("Genero",Genero)
-            values.put("Duracion", Duracion)
-            values.put("Calificacion",Calificacion)
-
             db.execSQL("UPDATE $DB_Tables set Titulo='$Titulo', Director='$Director', Genero='$Genero', Duracion= '$Duracion', Calificacion= '$Calificacion' WHERE Id=$Id")
             modified=true
 
@@ -74,6 +82,22 @@ class dbPeliculas(context: Context?) : dbHelper(context)  {
             db.close()
         }
         return modified
+    }
+
+    fun deletePelicula(Id: Int): Boolean{
+        var deleted = false
+        val dbHelper = dbHelper(context)
+        val db = dbHelper.writableDatabase
+
+        try{
+            db.execSQL("DELETE FROM $DB_Tables WHERE Id=$Id")
+            deleted = true
+        }catch (e: Exception){
+            deleted = false
+        }finally {
+            db.close()
+        }
+        return  deleted
     }
 
 }
