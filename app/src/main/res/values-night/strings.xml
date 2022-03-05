@@ -9,4 +9,6 @@
     <string name="strNoRegistros">Sin registros</string>
     <string name="strEditar">Editar</string>
     <string name="Borrar">Borrar</string>
+    <string name="version">1.0</string>
+    <string name="created_by">jcmonin83</string>
 </resources>

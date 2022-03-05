@@ -11,12 +11,14 @@
     <string name="strNoRegistros">Sin registros</string>
     <string name="strEditar">Editar</string>
     <string name="Borrar">Borrar</string>
-<!--    Genero Pelicula-->
+    <!--    Genero Pelicula-->
     <string name="gen01">Accion</string>
     <string name="gen02">Ficcion</string>
     <string name="gen03">Comedia</string>
     <string name="gen04">Drama</string>
     <string name="gen05">Infantil</string>
+    <string name="version">1.0</string>
+    <string name="created_by">jcmonin83</string>
     <string-array name="generoOptions">
         <item>@string/gen01</item>
         <item>@string/gen02</item>

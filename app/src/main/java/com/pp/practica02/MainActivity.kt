@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("Id", l.toInt())
 
             startActivity(intent)
-            finish()
+            //finish()
         }
         binding.lvLista.adapter = peliculaAdapter
 
